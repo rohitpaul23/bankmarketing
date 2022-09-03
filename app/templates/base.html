@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <head>
+        <title>Bank Marketing</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="title">BANK MARKETING</div>
+            <a href = "{{ url_for('index') }}">HOME</a>
+            <a href = "{{ url_for('form') }}">FORM</a>
+        </div>
+        <div class="body">
+            {% with message = get_flashed_messages() %}
+            {% if message %}
+            <span>{{ message[0] }}</span>
+            {% endif %}
+            {% endwith %}
+            {% block content %} {% endblock %}
+        </div>
+        <div class="footer">@rohitpaul23</div>
+    </body>
+</html>

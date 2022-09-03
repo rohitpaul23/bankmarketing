@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Form</h2>
+    <form action="" method="post" novalidate>
+        {{form.hidden_tag()}}
+        <div class="box">
+            <p>
+                {{form.age.label}} <br>
+                {{form.age()}}
+                {% for error in form.age.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.job.label}} <br>
+                {{form.job()}}
+                {% for error in form.job.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.marital.label}} <br>
+                {{form.marital()}}
+                {% for error in form.marital.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.education.label}} <br>
+                {{form.education()}}
+                {% for error in form.education.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.default.label}} <br>
+                {{form.default()}}
+                {% for error in form.default.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.balance.label}} <br>
+                {{form.balance()}}
+                {% for error in form.balance.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.housing.label}} <br>
+                {{form.housing()}}
+                {% for error in form.housing.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.loan.label}} <br>
+                {{form.loan()}}
+                {% for error in form.loan.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.contact.label}} <br>
+                {{form.contact()}}
+                {% for error in form.contact.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            
+        </div>
+        <div class="box">
+            <p>
+                {{form.day.label}} <br>
+                {{form.day()}}
+                {% for error in form.day.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.month.label}} <br>
+                {{form.month()}}
+                {% for error in form.month.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.duration.label}} <br>
+                {{form.duration()}}
+                {% for error in form.duration.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.campaign.label}} <br>
+                {{form.campaign()}}
+                {% for error in form.campaign.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.pdays.label}} <br>
+                {{form.pdays()}}
+                {% for error in form.pdays.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.previous.label}} <br>
+                {{form.previous()}}
+                {% for error in form.previous.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.poutcome.label}} <br>
+                {{form.poutcome()}}
+                {% for error in form.poutcome.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p id="submit">{{form.submit()}}</p>
+        </div>
+        
+    </form>
+{% endblock %}

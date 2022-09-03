@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if result == '' %}
+    <h1>Welcome</h1>
+    {% elif result == 0 %}
+    <div class="false">The client will not subscribed the term deposit</div>
+    {% else %}
+    <div class="True">The Client will subscribed the term deposit</div>
+    {% endif %}
+    <h2>Data Set Information:</h2>
+    <p>
+    The data is related with direct marketing campaigns of a Portuguese banking institution. 
+    The marketing campaigns were based on phone calls. Often, more than one contact to the same client 
+    was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') 
+    subscribed.
+    </p>
+    Dataset available in: <a href='https://archive.ics.uci.edu/ml/datasets/Bank+Marketing'>https://archive.ics.uci.edu/ml/datasets/Bank+Marketing</a>
+
+    <h3>The classification goal is to predict if the client will subscribe (yes/no) a term deposit.</h6>
+
+    <h3><a href = "{{ url_for('form') }}">Click here</a>, To check</h3>
+{% endblock %}
